@@ -40,6 +40,7 @@ const ScrapeKnoxNews = async () => {
       let date = text.match(regex);
       results.push(date[1]);
     });
+    console.log(results);
     return results;
   });
   headlines.map((obj) => {
@@ -77,3 +78,7 @@ const ScrapeUTKNews = async () => {
 
 ScrapeKnoxNews();
 ScrapeUTKNews();
+module.exports = {
+  ScrapeKnoxNews,
+  ScrapeUTKNews,
+};
