@@ -285,7 +285,7 @@ const Home: NextPage<any> = ({ utk, knox }) => {
                     <Header>UTK News</Header>
                   </HeaderWrapper>{" "}
                   {/* <PastWrapper /> */}
-                  {utkNews.length > 0 &&
+                  {utkNews &&
                     utkNews.map((headline: any) => {
                       return (
                         <HeadlineWrapper key={headline.id}>
@@ -362,9 +362,13 @@ Home.getInitialProps = async (ctx: any) => {
   // );
   // const days = await res.json();
   try {
-    const res = await fetch("http://localhost:5050/headlines/news.utk.edu");
+    const res = await fetch(
+      "https://protected-fjord-45227.herokuapp.com/headlines/news.utk.edu"
+    );
     const utk = await res.json();
-    const res2 = await fetch("http://localhost:5050/headlines/knoxnews.com");
+    const res2 = await fetch(
+      "https://protected-fjord-45227.herokuapp.com/headlines/knoxnews.com"
+    );
     const knox = await res2.json();
     return { utk: utk, knox: knox };
   } catch (err) {

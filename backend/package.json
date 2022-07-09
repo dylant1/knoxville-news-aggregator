@@ -1,7 +1,13 @@
 {
   "name": "knoxville-news-aggregator-backend",
+  "version": "1.0.0",
+  "description": "This example is so cool.",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.35.4",
@@ -17,5 +23,10 @@
   },
   "devDependencies": {
     "typescript": "^4.7.4"
-  }
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "jane-doe",
+  "license": "MIT"
 }

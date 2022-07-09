@@ -7,13 +7,14 @@ const port = 5050;
 require("dotenv").config();
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
+  process.env.SUPABASE_KEY ||
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl4dmVmbndka3llaWNzc2xkbXNyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY1NzEyMTMyNSwiZXhwIjoxOTcyNjk3MzI1fQ.QkSYjqPt8v1GrqdGJ-h8AXBXKsu60kvy1VJ08z8WkDA"
 );
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*",
+//   })
+// );
 app.get("/", (req, res) => {
   res.send("hellow world");
 });
@@ -62,6 +63,6 @@ app.get("/headlines/:source", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`server listening on port ${port}`);
 });
