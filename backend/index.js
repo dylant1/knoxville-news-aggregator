@@ -47,6 +47,20 @@ app.get("/headlines/:from-:to", async (req, res) => {
     console.log(error);
   }
 });
+app.get("/headlines/:source", async (req, res) => {
+  const { data, error } = await supabase
+    .from("headlines")
+    .select()
+    .match({
+      source: req.params.source,
+    })
+    .range(0, 10);
+  try {
+    res.send(data);
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 app.listen(port, () => {
   console.log(`server listening on port ${port}`);
