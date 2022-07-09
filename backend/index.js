@@ -3,13 +3,17 @@ const cors = require("cors");
 const { createClient } = require("@supabase/supabase-js");
 const app = express();
 const port = 5050;
-// app.use(cors);
+
 require("dotenv").config();
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_KEY
 );
-
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.get("/", (req, res) => {
   res.send("hellow world");
 });
@@ -44,6 +48,6 @@ app.get("/headlines/:from-:to", async (req, res) => {
   }
 });
 
-app.listen(8080, () => {
-  console.log("server listening on port 530");
+app.listen(port, () => {
+  console.log(`server listening on port ${port}`);
 });
