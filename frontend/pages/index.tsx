@@ -129,12 +129,11 @@ const Home: NextPage<any> = ({ utk, knox }) => {
   const toggleTheme = () => {
     theme == "light" ? setTheme("dark") : setTheme("light");
   };
-  // const [darkMode, setDarkMode] = useDarkMode();
   useEffect(() => {
-    if (showUtkNews) {
+    if (showUtkNews && utk) {
       setUtkNews(utk);
     }
-    if (showKnoxNews) {
+    if (showKnoxNews && knox) {
       setKnoxNews(knox);
     }
   }, []);
@@ -162,9 +161,7 @@ const Home: NextPage<any> = ({ utk, knox }) => {
       </PastXDaysWrapper>
     );
   };
-  useEffect(() => {
-    console.log(showKnoxNews);
-  }, [showKnoxNews]);
+
   return (
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
