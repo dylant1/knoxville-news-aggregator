@@ -342,7 +342,7 @@ const Home: NextPage<any> = ({ utk, knox }) => {
         </Hero>
 
         <Footer>
-          <div>Github</div> <div>Github</div> <div>Github</div>
+          <div>Github</div>
         </Footer>
       </div>
     </ThemeProvider>
