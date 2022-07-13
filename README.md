@@ -4,5 +4,11 @@
 URL: www.knoxnewsfeed.com
 
 ## Screenshots
-![Screenshot](/screenshot1.png?raw=true "Optional Title")
-![Screenshot](/screenshot2.png?raw=true "Optional Title")
+**Light Mode**
+![Screenshot](/screenshot1.png?raw=true "Light Mode")
+
+**Bionic Reading Enabled**
+![Screenshot](/screenshot2.png?raw=true "Bionic Reading")
+
+**Dark Mode**
+![Screenshot](/screenshot3.png?raw=true "Dark Mode")
