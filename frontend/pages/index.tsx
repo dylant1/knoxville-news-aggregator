@@ -136,7 +136,7 @@ const Home: NextPage<any> = ({ utk, knox }) => {
     if (showKnoxNews && knox) {
       setKnoxNews(knox);
     }
-  }, []);
+  }, [showKnoxNews, showUtkNews, utk, knox]);
   const PastWrapper = () => {
     return (
       <PastXDaysWrapper>
