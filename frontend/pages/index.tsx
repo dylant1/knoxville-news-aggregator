@@ -310,35 +310,11 @@ const Home: NextPage<any> = ({ utk, knox }) => {
                   <Header>Jobs</Header>
                 </HeaderWrapper>
                 <div>Coming Soon...</div>
-                {/* {utkNews.length > 0 &&
-                utkNews.map((headline: any) => {
-                  return (
-                    <div key={headline.id}>
-                      {bionic ? (
-                        <Headline
-                          href={headline.link}
-                          dangerouslySetInnerHTML={{
-                            __html: textVide(headline.headline),
-                          }}
-                        ></Headline>
-                      ) : (
-                        <Headline href={headline.link}>
-                          {headline.headline}
-                        </Headline>
-                      )}
-                      <DateWrapper>{headline.date}</DateWrapper>
-                      <Break />
-                    </div>
-                  );
-                })} */}
+           
               </div>
             </Column>
           </NewsWrapper>
-          {/* <JobsWrapper>
-          <Row>
-            <h1>Jobs</h1>
-          </Row>
-        </JobsWrapper> */}
+         
         </Hero>
 
         <Footer>
