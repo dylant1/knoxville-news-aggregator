@@ -2,3 +2,5 @@
   "presets": ["next/babel"],
   "plugins": [["styled-components", { "ssr": true }]]
 }
+
+// Possible change the ssr and remove styled components later to improve seo
